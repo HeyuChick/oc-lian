@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>涟（Lian）配色规范 v1.2</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #F7F4EF;
+            color: #1F2421;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 2px 8px rgba(31, 36, 33, 0.08);
+        }
+        h1 {
+            font-family: "Georgia", "Times New Roman", serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            color: #C4612F;
+        }
+        .subtitle {
+            font-size: 0.95rem;
+            color: #5C635D;
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+        .section {
+            margin-bottom: 2.5rem;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #E7E1D7;
+        }
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .color-card {
+            background: #FBF9F5;
+            border: 1px solid #E7E1D7;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .color-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(31, 36, 33, 0.12);
+        }
+        .color-swatch {
+            height: 80px;
+            width: 100%;
+            position: relative;
+        }
+        .color-info {
+            padding: 0.875rem;
+        }
+        .color-name {
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        .color-hex {
+            font-family: "Consolas", "Monaco", "Courier New", monospace;
+            font-size: 0.875rem;
+            color: #5C635D;
+            margin-bottom: 0.5rem;
+            user-select: all;
+            cursor: pointer;
+        }
+        .color-hex:hover {
+            color: #C4612F;
+        }
+        .color-usage {
+            font-size: 0.8rem;
+            color: #5C635D;
+            line-height: 1.4;
+        }
+        .legend {
+            background: #F2E3D6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: #5C635D;
+        }
+        .legend strong {
+            color: #C4612F;
+        }
+        .core-badge {
+            display: inline-block;
+            background: #C4612F;
+            color: #FFFFFF;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.5rem; }
+            .color-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>涟（Lian）配色规范</h1>
+        <div class="subtitle">深海海蛞蝓×白色犬兽人共生体 · v1.2 · 2026-07-02</div>
+
+        <!-- 基底毛色 -->
+        <div class="section">
+            <div class="section-title">基底毛色</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FAF7F0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">奶白</div>
+                        <div class="color-hex">#FAF7F0</div>
+                        <div class="color-usage">主体毛色，占面积最大，柔和温暖的白</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #F0EBE3;"></div>
+                    <div class="color-info">
+                        <div class="color-name">浅米</div>
+                        <div class="color-hex">#F0EBE3</div>
+                        <div class="color-usage">毛色暗部、阴影过渡，增加层次感</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E7E1D7;"></div>
+                    <div class="color-info">
+                        <div class="color-name">暖灰</div>
+                        <div class="color-hex">#E7E1D7</div>
+                        <div class="color-usage">深阴影、细节轮廓线，不用纯黑</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 海蛞蝓特征色 -->
+        <div class="section">
+            <div class="section-title">海蛞蝓特征色（核心识别色系）</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4A9B8E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">海水蓝绿<span class="core-badge">核心</span></div>
+                        <div class="color-hex">#4A9B8E</div>
+                        <div class="color-usage"><strong>最重要的识别色。</strong>触角尖、耳尖、尾尖、软鳍边缘、额发挑染、项圈液体、隐纹。平静状态主色，所有海洋特征的基准色。</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4A90A4;"></div>
+                    <div class="color-info">
+                        <div class="color-name">青蓝</div>
+                        <div class="color-hex">#4A90A4</div>
+                        <div class="color-usage">额前挑染发束专用色（与海水蓝绿略有区别，更偏蓝）</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #3C7A8C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">青</div>
+                        <div class="color-hex">#3C7A8C</div>
+                        <div class="color-usage">情绪"专注/好奇"档，触角/耳尖/眼瞳同步变为此色</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #6B5B95;"></div>
+                    <div class="color-info">
+                        <div class="color-name">青紫</div>
+                        <div class="color-hex">#6B5B95</div>
+                        <div class="color-usage">情绪"紧张/担忧"档，冷暖过渡色</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #E85D9A;"></div>
+                    <div class="color-info">
+                        <div class="color-name">洋红</div>
+                        <div class="color-hex">#E85D9A</div>
+                        <div class="color-usage">情绪"激动/兴奋/生气"档，高饱和度暖色</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #C7446E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">红</div>
+                        <div class="color-hex">#C7446E</div>
+                        <div class="color-usage">情绪"失控/极端"档，最高警戒色</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #7DD3C0; box-shadow: 0 0 20px #7DD3C0;"></div>
+                    <div class="color-info">
+                        <div class="color-name">荧光青绿</div>
+                        <div class="color-hex">#7DD3C0</div>
+                        <div class="color-usage">软鳍边缘荧光、移动痕迹，昏暗环境发光效果（画荧光时加外发光/高光）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 眼/鼻/肉垫 -->
+        <div class="section">
+            <div class="section-title">眼/鼻/肉垫</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #4A9FB5;"></div>
+                    <div class="color-info">
+                        <div class="color-name">蓝绿圆瞳</div>
+                        <div class="color-hex">#4A9FB5</div>
+                        <div class="color-usage">平静状态眼瞳色，随情绪同步变色（参考情绪色阶）</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFB8C6;"></div>
+                    <div class="color-info">
+                        <div class="color-name">粉鼻/肉垫<span class="core-badge">核心</span></div>
+                        <div class="color-hex">#FFB8C6</div>
+                        <div class="color-usage">鼻子、肉垫统一用此色（软组织色，与海蛞蝓冷色形成反差）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 褐色标记 -->
+        <div class="section">
+            <div class="section-title">褐色标记</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #6B4E3D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">褐色痣斑<span class="core-badge">核心</span></div>
+                        <div class="color-hex">#6B4E3D</div>
+                        <div class="color-usage">眉上一颗小痣（直径2mm）+ 下唇左侧小斑（不规则椭圆5×3mm）。暖色人类胎记特征，打破纯幻想配色。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 配饰硬件 -->
+        <div class="section">
+            <div class="section-title">配饰硬件</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #3C5A78;"></div>
+                    <div class="color-info">
+                        <div class="color-name">青蓝项圈<span class="core-badge">核心</span></div>
+                        <div class="color-hex">#3C5A78</div>
+                        <div class="color-usage">功能项圈主体，哑光硬质材料，功能抑制器色，与海水色系呼应</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #B0BEC5;"></div>
+                    <div class="color-info">
+                        <div class="color-name">银灰</div>
+                        <div class="color-hex">#B0BEC5</div>
+                        <div class="color-usage">项圈金属扣、其他金属配件</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 辅助色 -->
+        <div class="section">
+            <div class="section-title">辅助色</div>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #E7E1D7;"></div>
+                    <div class="color-info">
+                        <div class="color-name">纯白</div>
+                        <div class="color-hex">#FFFFFF</div>
+                        <div class="color-usage">衣物、透明雨衣高光、强光反射</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #1F2421;"></div>
+                    <div class="color-info">
+                        <div class="color-name">暖黑/深炭</div>
+                        <div class="color-hex">#1F2421</div>
+                        <div class="color-usage">深色服装、液态形态墨线勾边、文字/强对比元素</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 使用说明 -->
+        <div class="legend">
+            <strong>使用说明：</strong><br>
+            • 标记<span class="core-badge">核心</span>的颜色为必画识别符，不可省略或替换。<br>
+            • 海水蓝绿 #4A9B8E 是最重要的识别色，贯穿所有海洋异种特征，必须准确复现。<br>
+            • 情绪显色系统：平静#4A9B8E → 专注#3C7A8C → 紧张#6B5B95 → 激动#E85D9A → 失控#C7446E，触角/耳尖/眼瞳三处必须同步变色。<br>
+            • 点击色值可全选复制，方便粘贴到绘图软件取色器。<br>
+            • 本色卡可离线保存，随时查阅。建议发给约稿画师作为配色参考。
+        </div>
+    </div>
+</body>
+</html>
