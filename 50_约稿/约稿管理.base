@@ -1,0 +1,22 @@
+filters: 'file.ext == "md"'
+views:
+  - type: table
+    name: 约稿
+    filters: 'note.type == "commission"'
+    order:
+      - file.name
+      - note.status
+      - note.characters
+      - note.artist
+      - note.ordered
+      - note.deadline
+      - note.price
+  - type: table
+    name: 画师
+    filters: 'note.type == "artist"'
+    order:
+      - file.name
+      - note.platform
+      - note.contact
+      - note.status
+

@@ -1,0 +1,35 @@
+filters: file.ext == "md"
+views:
+  - type: table
+    name: 角色
+    filters: note.type == "character"
+    order:
+      - file.name
+      - status
+      - canon
+      - world
+      - species
+  - type: table
+    name: 角色设定
+    filters: note.type == "character_setting"
+    order:
+      - file.name
+      - character
+      - topic
+      - status
+      - canon
+  - type: table
+    name: 世界实体
+    filters:
+      or:
+        - note.type == "world"
+        - note.type == "organization"
+        - note.type == "location"
+        - note.type == "event"
+        - note.type == "species"
+        - note.type == "world_rule"
+    order:
+      - file.name
+      - type
+      - status
+      - canon

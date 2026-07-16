@@ -1,0 +1,13 @@
+filters: file.ext == "md"
+views:
+  - type: table
+    name: 稿件
+    filters: note.type == "artwork"
+    order:
+      - file.name
+      - character
+      - artwork_type
+      - artist
+      - date
+      - status
+      - commission
